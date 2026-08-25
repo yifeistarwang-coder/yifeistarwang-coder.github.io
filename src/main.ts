@@ -9,15 +9,6 @@ import { createStore } from './content/store';
 import { docCommand } from './content/commands';
 import { builtinApps } from './apps';
 
-// The visit badge is cache-busted on every load so each page view actually
-// reaches komarev and increments the shared counter. The extra query param is
-// safe: ghpvc counts by username only, label/color/style/extra params do not
-// change the counter key.
-const visitImg = document.querySelector<HTMLImageElement>('.term-footer .visits img');
-if (visitImg) {
-  visitImg.src += (visitImg.src.includes('?') ? '&' : '?') + 't=' + Date.now();
-}
-
 const termHost = document.getElementById('term-host');
 const termScreen = document.getElementById('term-screen');
 if (!termHost || !termScreen) throw new Error('missing #term-host/#term-screen');

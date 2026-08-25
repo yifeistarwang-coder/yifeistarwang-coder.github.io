@@ -7,5 +7,5 @@
 
 Feel free to reach out for collaboration, questions, or just to say hello.
 
-The visit count in the footer is a komarev badge shared with the GitHub
-profile. No personal data is collected or stored by this site.
+The visit count in the footer is served by a self-hosted Cloudflare Worker
+(see the site's README). No personal data is collected or stored by this site.

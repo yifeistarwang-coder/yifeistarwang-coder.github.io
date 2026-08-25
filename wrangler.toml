@@ -1,0 +1,15 @@
+# Cloudflare Worker config for the visit counter (worker/counter.js).
+#
+# CLI deploy (alternative to the dashboard UI):
+#   1. npm i -g wrangler
+#   2. wrangler login                      (opens browser to authorize)
+#   3. wrangler kv namespace create VISITS (copy the printed id below)
+#   4. replace REPLACE_WITH_NAMESPACE_ID with that id
+#   5. wrangler deploy
+name = "yw-visits"
+main = "worker/counter.js"
+compatibility_date = "2026-08-25"
+
+[[kv_namespaces]]
+binding = "VISITS"
+id = "REPLACE_WITH_NAMESPACE_ID"

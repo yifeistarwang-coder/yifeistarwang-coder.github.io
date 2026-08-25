@@ -68,13 +68,15 @@
 
         <div class="term-footer">
           <a href="https://github.com/yifeistarwang-coder" target="_blank" rel="noreferrer noopener">github</a>
-          <!-- Visit badge shared with the GitHub profile (same komarev counter);
-               komarev.com is the only third party this site loads. -->
+          <!-- Visit badge served by the self-hosted Cloudflare Worker
+               (worker/counter.js); shared counter with the GitHub profile
+               README badge. -->
           <span class="visits">
             <img
-              src="https://komarev.com/ghpvc/?username=yifeistarwang-coder&label=visits&style=flat-square&color=2a6f4e"
+              src="https://yw-visits.yifei-star-wang.workers.dev/badge?label=visits&color=2a6f4e"
               alt="visits"
-              width="64" height="20" loading="lazy"
+              height="20"
+              loading="eager"
             />
           </span>
           <span>Yifei Wang</span>
