@@ -15,10 +15,10 @@ and efficient ML infrastructure.
 
 ## Experience
 
+Open to internship opportunities and research collaboration — feel free to
+reach out via [contact](#contact).
+
 ## Education
 
 - 2026– Eng.D. at University of Science and Technology of China (USTC), advised by Teng Wang and Chao Wang.
 - 2022–2026 Bachelor's degree in Electronic Science and Technology, Chongqing University of Posts and Telecommunications.
-
-When not coding, you can find me reading about programming language
-theory, exploring new tools, or contributing to open source.

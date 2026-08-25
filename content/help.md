@@ -4,12 +4,13 @@ This site is a terminal. Documents are commands — type them to read.
 
 ## Documents
 
-- `index` — show the home page
-- `about` — quick summary
-- `bio` — short biography
-- `projects` — selected work
+- `index` — show the home page (links & navigation)
+- `bio` — biography, research interests, education
+- `projects` — selected work (CUDA / FPGA)
 - `papers` — publications & drafts
-- `contact` — get in touch
+- `contact` — email addresses
+- `about` — quick summary
+- `help` — show this help message
 
 ## Shell commands
 
@@ -20,10 +21,10 @@ This site is a terminal. Documents are commands — type them to read.
 - `pwd` — print working directory
 - `whoami` — display current user
 - `clear` — clear the terminal screen
-- `help` — show this help message
 
 ## Tips
 
+- Underlined text is a clickable link
 - Use ↑ / ↓ to navigate command history
 - Press Tab for auto-completion
 - Press Ctrl+C to cancel current input
