@@ -9,9 +9,8 @@ and efficient ML infrastructure.
 
 ## Research Interests
 
-- Systems programming — OS kernels, compilers, runtime systems
 - Hardware acceleration — CUDA, FPGA, GPU pipelines
-- Machine learning — ML infrastructure, efficient training
+- Machine learning — ML infrastructure, efficient system
 - Software engineering — automation, tooling, developer experience
 
 ## Background
