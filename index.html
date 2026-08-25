@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Yifei Wang — Eng.D. student at USTC working at the intersection of systems software and AI (CUDA, FPGA). Personal homepage that doubles as an interactive terminal." />
+    <meta name="theme-color" content="#fafafa" />
+    <title>Yifei Wang@homepage:~</title>
+    <link rel="canonical" href="https://yifeistarwang-coder.github.io/" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Yifei Wang — Homepage" />
+    <meta property="og:title" content="Yifei Wang — Personal Homepage" />
+    <meta property="og:description" content="Eng.D. student at USTC working at the intersection of systems software and AI — CUDA, FPGA. A personal homepage that doubles as an interactive terminal: type `help` to explore." />
+    <meta property="og:url" content="https://yifeistarwang-coder.github.io/" />
+    <meta property="og:image" content="https://yifeistarwang-coder.github.io/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Yifei Wang — Personal Homepage" />
+    <meta name="twitter:description" content="Eng.D. student at USTC — systems software and AI. An interactive terminal-style homepage." />
+    <meta name="twitter:image" content="https://yifeistarwang-coder.github.io/og-image.jpg" />
+
+    <!-- Structured data for search engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Yifei Wang",
+      "url": "https://yifeistarwang-coder.github.io/",
+      "email": "mailto:yifei.star.wang@gmail.com",
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Science and Technology of China"
+      },
+      "sameAs": ["https://github.com/yifeistarwang-coder"]
+    }
+    </script>
+
+    <!-- Marks the document as JS-capable: the terminal host starts hidden
+         (html.js) and is revealed once fitted, so the pre-JS frame is never
+         flashed. Without JS the static <noscript> card is shown instead. -->
+    <script>
+      document.documentElement.classList.add('js');
+      // Safety net: if the bundle fails, still reveal the frame after 3s.
+      setTimeout(function () {
+        document.getElementById('term-host')?.classList.add('ready');
+      }, 3000);
+    </script>
+    <script type="module" crossorigin src="/assets/index-CBCJ8Ard.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BBVlDfPQ.css">
+  </head>
+  <body>
+    <div id="app">
+      <div id="term-host">
+        <div class="term-titlebar">
+          <span class="title">Yifei Wang@homepage:~</span>
+          <nav class="quick-cmds" aria-label="Quick navigation">
+            <button type="button" data-cmd="index">index</button>
+            <button type="button" data-cmd="bio">bio</button>
+            <button type="button" data-cmd="projects">projects</button>
+            <button type="button" data-cmd="contact">contact</button>
+            <button type="button" data-cmd="help">help</button>
+          </nav>
+        </div>
+
+        <div class="term-body">
+          <div id="term-screen"></div>
+        </div>
+
+        <div class="term-footer">
+          <a href="https://github.com/yifeistarwang-coder" target="_blank" rel="noreferrer noopener">github</a>
+          <!-- Visit badge shared with the GitHub profile (same komarev counter);
+               komarev.com is the only third party this site loads. -->
+          <span class="visits">
+            <img
+              src="https://komarev.com/ghpvc/?username=yifeistarwang-coder&label=visits&style=flat-square&color=2a6f4e"
+              alt="visits"
+              width="64" height="20" loading="lazy"
+            />
+          </span>
+          <span>Yifei Wang</span>
+        </div>
+      </div>
+
+      <!-- Progressive enhancement: readable without JavaScript. -->
+      <noscript class="static-fallback">
+        <div class="static-card">
+          <h1>Yifei Wang</h1>
+          <p>
+            An Eng.D. student at the University of Science and Technology of China (USTC),
+            working at the intersection of systems software and AI — CUDA, FPGA, and
+            everything in between.
+          </p>
+          <ul>
+            <li>GitHub: <a href="https://github.com/yifeistarwang-coder">github.com/yifeistarwang-coder</a></li>
+            <li>Email: <a href="mailto:yifei.star.wang@gmail.com">yifei.star.wang@gmail.com</a></li>
+            <li>School email: <a href="mailto:yifei.star.wang@mail.ustc.edu.cn">yifei.star.wang@mail.ustc.edu.cn</a></li>
+          </ul>
+          <p class="dim">This site is an interactive terminal — enable JavaScript to explore it with commands like <code>help</code>, <code>bio</code>, or <code>projects</code>.</p>
+        </div>
+      </noscript>
+    </div>
+
+  </body>
+</html>
