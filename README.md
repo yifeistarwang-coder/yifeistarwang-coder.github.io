@@ -54,7 +54,17 @@ npm run build      # content compiler + vite build → dist/
 that branch (Settings → Pages → Build and deployment → Source: Deploy from a
 branch → `gh-pages` / root).
 
+## Visitor counter
+
+The footer visit badge is served by a self-hosted Cloudflare Worker
+(`worker/counter.js`) backed by a KV namespace. The homepage footer `<img>` and
+the GitHub profile README badge point at the same `/badge` endpoint, so both
+share one counter; each page load increments it once.
+
+Deploy: Cloudflare Dashboard → Workers & Pages → Create a Worker → paste
+`worker/counter.js` → create a KV namespace and bind it as `VISITS`.
+
 ## Privacy
 
-The only third-party resource is the visit badge (komarev.com), shared with
-the GitHub profile. No analytics, cookies, or tracking scripts.
+The only third-party resource is the visit badge served by the self-hosted
+Worker above. No analytics, cookies, or tracking scripts.
