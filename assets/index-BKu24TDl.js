@@ -38,11 +38,12 @@ and efficient ML infrastructure.
 - Machine learning — ML infrastructure, efficient system
 - Software engineering — automation, tooling, developer experience
 
-## Background
+## Experience
 
-- University of Science and Technology of China (USTC)
-- Focus: Computer Science & Technology
-- Coursework: OS, Compilers, ML, Distributed Systems, Algorithms
+## Education
+
+- 2026– Eng.D. at University of Science and Technology of China (USTC), advised by Teng Wang and Chao Wang.
+- 2022–2026 Bachelor's degree in Electronic Science and Technology, Chongqing University of Posts and Telecommunications.
 
 When not coding, you can find me reading about programming language
 theory, exploring new tools, or contributing to open source.`,path:"bio.md",kind:"page",apps:[]},{slug:"contact",title:"Contact",body:`# Contact
