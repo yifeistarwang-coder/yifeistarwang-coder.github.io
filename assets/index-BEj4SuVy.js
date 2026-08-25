@@ -40,34 +40,30 @@ and efficient ML infrastructure.
 
 ## Experience
 
+Open to internship opportunities and research collaboration — feel free to
+reach out via [contact](#contact).
+
 ## Education
 
 - 2026– Eng.D. at University of Science and Technology of China (USTC), advised by Teng Wang and Chao Wang.
-- 2022–2026 Bachelor's degree in Electronic Science and Technology, Chongqing University of Posts and Telecommunications.
+- 2022–2026 Bachelor's degree in Electronic Science and Technology, Chongqing University of Posts and Telecommunications.`,path:"bio.md",kind:"page",apps:[]},{slug:"contact",title:"Contact",body:`# Contact
 
-When not coding, you can find me reading about programming language
-theory, exploring new tools, or contributing to open source.`,path:"bio.md",kind:"page",apps:[]},{slug:"contact",title:"Contact",body:`# Contact
-
-- **GitHub** · [github.com/yifeistarwang-coder](https://github.com/yifeistarwang-coder)
 - **Personal Email** · [yifei.star.wang@gmail.com](mailto:yifei.star.wang@gmail.com)
 - **School Email** · [yifei.star.wang@mail.ustc.edu.cn](mailto:yifei.star.wang@mail.ustc.edu.cn)
-- **School** · University of Science and Technology of China (USTC)
 
-Feel free to reach out for collaboration, questions, or just to say hello.
-
-The visit count in the footer is served by a self-hosted Cloudflare Worker
-(see the site's README). No personal data is collected or stored by this site.`,path:"contact.md",kind:"page",apps:[]},{slug:"help",title:"Help",body:`# Help
+Feel free to reach out for collaboration, questions, or just to say hello.`,path:"contact.md",kind:"page",apps:[]},{slug:"help",title:"Help",body:`# Help
 
 This site is a terminal. Documents are commands — type them to read.
 
 ## Documents
 
-- \`index\` — show the home page
-- \`about\` — quick summary
-- \`bio\` — short biography
-- \`projects\` — selected work
+- \`index\` — show the home page (links & navigation)
+- \`bio\` — biography, research interests, education
+- \`projects\` — selected work (CUDA / FPGA)
 - \`papers\` — publications & drafts
-- \`contact\` — get in touch
+- \`contact\` — email addresses
+- \`about\` — quick summary
+- \`help\` — show this help message
 
 ## Shell commands
 
@@ -78,28 +74,28 @@ This site is a terminal. Documents are commands — type them to read.
 - \`pwd\` — print working directory
 - \`whoami\` — display current user
 - \`clear\` — clear the terminal screen
-- \`help\` — show this help message
 
 ## Tips
 
+- Underlined text is a clickable link
 - Use ↑ / ↓ to navigate command history
 - Press Tab for auto-completion
 - Press Ctrl+C to cancel current input
 - Press Ctrl+L to clear the screen
 - Press Ctrl+D on an empty prompt to go home`,path:"help.md",kind:"page",apps:[]},{slug:"index",title:"Yifei Wang",body:`# Yifei Wang
 
-- **GitHub** · [github.com/yifeistarwang-coder](https://github.com/yifeistarwang-coder)
+- **School** · University of Science and Technology of China (USTC)
 - **Email** · [yifei.star.wang@gmail.com](mailto:yifei.star.wang@gmail.com)
 - **School Email** · [yifei.star.wang@mail.ustc.edu.cn](mailto:yifei.star.wang@mail.ustc.edu.cn)
-- **School** · University of Science and Technology of China (USTC)
+- 🎓 · [Yifei Wang Google Scholar](https://scholar.google.com/citations?user=wZh7bAkAAAAJ)
+- **GitHub** · [github.com/yifeistarwang-coder](https://github.com/yifeistarwang-coder)
 
-An Eng.D. student at USTC working at the intersection of systems software and AI — CUDA, FPGA, and everything in between.
+An Eng.D. student at USTC working at the intersection of systems software and AI — Computer Architecture, Embedded Development, and efficient ML infrastructure.
 
 ## Navigation
 
 - [bio](#bio) — short biography
 - [projects](#projects) — selected work
-- [papers](#papers) — publications & drafts
 - [contact](#contact) — get in touch
 - [help](#help) — all available commands
 
