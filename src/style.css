@@ -7,7 +7,7 @@
 
   --bg:       #fafafa;
   --fg:       #333;
-  --fg-dim:   #888;
+  --fg-dim:   #666;      /* AA on #fafafa (~4.9:1) */
   --fg-bright:#111;
   --accent:   #2a6f4e;
   --error:    #c06060;
@@ -37,11 +37,16 @@ body {
 
 /* ---- App layout ---- */
 #app {
-  height: 100vh;
+  height: 100vh; /* fallback */
+  height: 100dvh; /* iOS: tracks the visible viewport */
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 12px;
+  padding-top: calc(12px + env(safe-area-inset-top));
+  padding-right: calc(12px + env(safe-area-inset-right));
+  padding-bottom: calc(12px + env(safe-area-inset-bottom));
+  padding-left: calc(12px + env(safe-area-inset-left));
 }
 
 /* ---- Terminal window frame ---- */
@@ -57,15 +62,21 @@ body {
   border-radius: 8px;
   background: var(--bg);
   overflow: hidden;
-  opacity: 0;
   transition: opacity 200ms ease-out;
 }
-#term-host.ready { opacity: 1; }
+
+/* Hidden until the terminal is fitted and revealed by JS; without JS the
+   frame is hidden entirely and the static <noscript> card is shown instead. */
+html.js #term-host { opacity: 0; }
+html.js #term-host.ready { opacity: 1; }
+html:not(.js) #term-host { display: none; }
 
 /* ---- Title bar ---- */
 .term-titlebar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   padding: 8px 16px;
   border-bottom: 1px solid var(--border);
   user-select: none;
@@ -76,6 +87,28 @@ body {
   font-size: 12px;
   color: var(--fg-dim);
   letter-spacing: 0.3px;
+}
+
+/* Quick-command buttons: tap-to-run navigation (touch friendly). */
+.quick-cmds {
+  display: flex;
+  gap: 6px;
+}
+.quick-cmds button {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--fg-dim);
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.7;
+  padding: 0 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.quick-cmds button:hover {
+  color: var(--fg);
+  border-color: var(--fg-dim);
 }
 
 /* ---- Terminal content area (xterm host) ---- */
@@ -102,6 +135,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 8px;
   padding: 6px 24px;
   border-top: 1px solid var(--border);
   font-size: 11px;
@@ -113,11 +147,52 @@ body {
   text-decoration: none;
 }
 .term-footer a:hover { color: var(--fg); }
+.term-footer .visits {
+  display: inline-flex;
+  align-items: center;
+}
+.term-footer .visits img {
+  display: block;
+  border-radius: 2px;
+}
+
+/* ---- Keyboard focus & reduced motion ---- */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+#term-host:focus-within { border-color: var(--accent); }
+
+@media (prefers-reduced-motion: reduce) {
+  #term-host { transition: none; }
+}
+
+/* ---- Static fallback (rendered only when JS is disabled) ---- */
+.static-fallback {
+  width: 100%;
+  max-width: 720px;
+}
+.static-card {
+  margin: 24px auto;
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+}
+.static-card h1 { margin: 0 0 8px; font-size: 22px; }
+.static-card p { margin: 8px 0; }
+.static-card ul { margin: 8px 0; padding-left: 20px; }
+.static-card a { color: var(--accent); }
+.static-card .dim { color: var(--fg-dim); }
 
 /* ---- Responsive ---- */
 @media (max-width: 640px) {
   #app { padding: 4px; }
   #term-host { border-radius: 4px; }
   .term-body { padding: 6px 2px; }
-  .term-titlebar .title { display: none; }
+  .term-titlebar { padding: 6px 10px; }
+  .term-titlebar .title { font-size: 11px; }
+  .quick-cmds { gap: 4px; }
+  .quick-cmds button { font-size: 10px; padding: 0 6px; }
 }

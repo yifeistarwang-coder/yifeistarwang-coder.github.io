@@ -1,0 +1,10 @@
+node_modules/
+dist/
+src/generated/
+.npm-cache/
+
+# Debug artifacts & files that belong to other repos
+screenshot_*.png
+bio.html
+profile-README.md
+.DS_Store
