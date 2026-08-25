@@ -19,7 +19,6 @@ This site is a terminal. Documents are commands — type them to read.
 - `cd <dir>` — change directory
 - `pwd` — print working directory
 - `whoami` — display current user
-- `visitors` — show visit counts
 - `clear` — clear the terminal screen
 - `help` — show this help message
 

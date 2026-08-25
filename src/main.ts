@@ -8,9 +8,6 @@ import { Shell } from './shell/shell';
 import { createStore } from './content/store';
 import { docCommand } from './content/commands';
 import { builtinApps } from './apps';
-import { recordVisit } from './apps/visitors';
-
-recordVisit();
 
 // The visit badge is cache-busted on every load so each page view actually
 // reaches komarev and increments the shared counter. The extra query param is

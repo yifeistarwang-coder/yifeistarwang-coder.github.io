@@ -7,7 +7,6 @@ import { clear } from './clear';
 import { ls } from './ls';
 import { pwd } from './pwd';
 import { tree } from './tree';
-import { visitors } from './visitors';
 import { whoami } from './whoami';
 
-export const builtinApps: Command[] = [cat, cd, clear, ls, pwd, tree, visitors, whoami];
+export const builtinApps: Command[] = [cat, cd, clear, ls, pwd, tree, whoami];
