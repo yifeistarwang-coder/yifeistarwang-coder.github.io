@@ -66,6 +66,9 @@ export class Term {
       letterSpacing: 0,
       cursorBlink: true,
       allowProposedApi: true,
+      // Transparent canvas so the page background image shows through the
+      // (semi-transparent) shell instead of an opaque #fafafa fill.
+      allowTransparency: true,
       // Expose output to screen readers (aria-live) — without this the whole
       // page content is invisible to assistive tech.
       screenReaderMode: true,
@@ -89,7 +92,7 @@ export class Term {
       },
       // Light palette aligned with style.css variables.
       theme: {
-        background: '#fafafa',
+        background: 'rgba(250, 250, 250, 0)',
         foreground: '#333333',
         cursor: '#2a6f4e',
         cursorAccent: '#fafafa',

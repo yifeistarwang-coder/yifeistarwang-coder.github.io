@@ -7,9 +7,8 @@ This site is a terminal. Documents are commands — type them to read.
 - `index` — show the home page (links & navigation)
 - `bio` — biography, research interests, education
 - `projects` — selected work (CUDA / FPGA)
-- `papers` — publications & drafts
+- `links` — frequently used resource sites
 - `contact` — email addresses
-- `about` — quick summary
 - `help` — show this help message
 
 ## Shell commands

@@ -88,18 +88,14 @@ export class Shell {
   async start(): Promise<void> {
     this.term.onShellData((d) => this.onData(d));
     if (this.initialCommand) {
-      const { text } = this.promptFor();
-      this.term.write(text + this.initialCommand + '\r\n');
-      await this.execute(this.initialCommand);
+      await this.runPage(this.initialCommand);
     }
     for (;;) {
       // Run commands queued while a previous command was executing (e.g. the
       // visitor clicked a link mid-render) before showing the next prompt.
       while (this.pending.length > 0) {
         const cmd = this.pending.shift()!;
-        const { text } = this.promptFor();
-        this.term.write(text + cmd + '\r\n');
-        await this.execute(cmd);
+        await this.runPage(cmd);
       }
       this.buffer = '';
       this.cursor = 0;
@@ -109,8 +105,25 @@ export class Shell {
       this.curWidth = width;
       this.term.write(this.curPrompt);
       const line = await this.readLine();
-      await this.execute(line);
+      // Empty submissions (plain Enter, Ctrl-C) keep the current page.
+      if (line.trim()) await this.runPage(line);
     }
+  }
+
+  /** Wipe the screen and scrollback, homing the cursor: the next command
+   *  starts a fresh "page", so only its own output remains visible —
+   *  page-style navigation rather than an ever-growing scroll. */
+  private clearScreen(): void {
+    this.term.write('\x1b[2J\x1b[3J\x1b[H');
+  }
+
+  /** Run a command line as a fresh page: clear previous output, echo the
+   *  prompt and the command at the top, then execute. */
+  private async runPage(line: string): Promise<void> {
+    this.clearScreen();
+    const { text } = this.promptFor();
+    this.term.write(text + line + '\r\n');
+    await this.execute(line);
   }
 
   /** Run a command string exactly as if the user typed it (used by buttons). */
